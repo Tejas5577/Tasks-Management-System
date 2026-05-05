@@ -1,0 +1,155 @@
+/* 1. PREMIUM FONT & VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* --faint-purple: #c3addd;  */
+  --faint-purple: rgb(153, 251, 118) !important;    
+  --black-surface: #0f0f12;     /* Card Black */
+  --purple-faint: #a855f7;      /* Soft Purple */
+  --pink-soft: #f472b6;         /* Faint Pink */
+  --text-primary: #ffffff;
+  --text-secondary: #f9fbfd;
+  --glass-border: rgba(255, 255, 255, 0.06);
+}
+
+/* 2. BODY WITH GRADIENT DEPTH */
+body {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--faint-purple) !important;
+  color: var(--text-primary) !important;
+  margin: 0;
+  min-height: 100vh;
+  /* Radial gradients create that "faint glowing" look */
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 35%),
+    radial-gradient(circle at 100% 100%, rgba(244, 114, 182, 0.1) 0%, transparent 35%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 3. GLASSMORPHISM NAVBAR */
+.navbar {
+  background: rgba(5, 5, 5, 0.8) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--glass-border) !important;
+  padding: 1rem 2.5rem !important;
+}
+
+.navbar-brand {
+  font-weight: 800 !important;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  background: linear-gradient(to right, var(--purple-faint), var(--pink-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 4. PREMIUM "GLASS" CARDS */
+.card {
+  background: var(--black-surface) !important;
+  /* background: yellow !important; */
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 20px !important;
+  /* color: var(--text-primary) !important; */
+  color: white !important;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(168, 85, 247, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.1) !important;
+}
+/* Fix for Description Visibility */
+.card-text, .card p {
+  color: var(--text-secondary) !important; /* This uses your #f9fbfd color */
+  opacity: 1 !important;
+}
+
+/* 5. AURORA BUTTONS */
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple-faint), var(--pink-soft)) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 12px 28px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(244, 114, 182, 0.4) !important;
+  opacity: 0.9;
+}
+
+.btn-outline-primary {
+  border: 1.5px solid var(--purple-faint) !important;
+  color: var(--purple-faint) !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  font-weight: 600 !important;
+}
+
+.btn-outline-primary:hover {
+  background: rgba(168, 85, 247, 0.1) !important;
+  color: var(--pink-soft) !important;
+  border-color: var(--pink-soft) !important;
+}
+
+/* 6. NEON BADGES */
+.badge {
+  /* background: rgba(228, 247, 85, 0.1) !important; */
+  background: #f59e0b !important;
+  /* color: var(--purple-faint) !important; */
+  color: white !important;
+  border: 1px solid rgba(168, 85, 247, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-weight: 500 !important;}
+
+
+
+/* 7. MODERN TABLE (Task View) */
+.table {
+  background: var(--black-surface) !important;
+  color: var(--text-primary) !important;
+ 
+  border-radius: 16px !important;
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important; /* Adds space between rows */
+}
+
+.table thead th {
+  border: none !important;
+  /* color: var(--text-secondary) !important; */
+  color: black !important;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.table tbody tr {
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 8. SCROLLBAR CUSTOMIZATION */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--faint-purple);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--purple-faint), var(--pink-soft));
+  border-radius: 10px;
+}
+
