@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_URL ||'http://localhost:5000/api', // Our backend URL
+    
+    // baseURL: import.meta.env.VITE_API_URL ||'http://localhost:5000/api', // Our backend URL
+
+     baseURL:tasks-management-system-production.up.railway.app // Our backend URL
 });
 
 // This interceptor automatically attaches JWT token to every request
